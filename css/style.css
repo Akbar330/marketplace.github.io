@@ -1,0 +1,299 @@
+body {
+  padding-top: 70px; /* Space for the top navbar */
+  padding-bottom: 70px; /* Space for the bottom navbar */
+  background-color: #e9ecef;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  overflow-y: scroll; /* Mengizinkan scroll secara vertikal */
+  scrollbar-width: none; /* Untuk Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Untuk Chrome, Safari, dan Edge */
+}
+
+
+
+
+/* Menu Item Styling */
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  margin: 10px auto;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item img {
+  width: 45px;
+  height: 45px;
+  transition: transform 0.3s ease;
+}
+
+.menu-item p {
+  margin: 8px 0 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.menu-item:hover {
+  background-color: #007bff;
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.menu-item:hover img {
+  transform: rotate(20deg);
+}
+
+/* Card Styling */
+.card {
+  margin-bottom: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Search Bar Styling */
+.search-bar {
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.search-bar .form-control {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 40px;
+  border-color: #007bff;
+}
+
+.search-bar .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  height: 40px;
+  padding: 0 12px;
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.search-bar .btn img {
+  height: 20px;
+  width: 20px;
+}
+
+/* Wishlist Icon Styling */
+.wishlist-icon {
+  width: 45px;
+  height: 45px;
+  color: #dc3545;
+  transition: transform 0.3s ease;
+}
+
+.wishlist-icon:hover {
+  transform: scale(1.2) rotate(15deg);
+}
+
+/* Table Responsive Styling */
+.table-responsive {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .table thead {
+    display: none;
+  }
+  .table, .table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+  }
+  .table tr {
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .table tr:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  }
+  .table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    border-bottom: none;
+  }
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: 50%;
+    padding-right: 10px;
+    text-align: left;
+    font-weight: bold;
+    color: #007bff;
+  }
+}
+
+/* Search Results Styling */
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 32px;
+  color: #007bff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+  transform: translateX(15px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+li h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+  flex-grow: 1;
+}
+
+li p {
+  margin: 5px 0;
+  color: #666;
+}
+
+li img {
+  border-radius: 10px;
+  margin-left: 15px;
+  width: 120px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+li img:hover {
+  transform: scale(1.15);
+}
+
+/* Bottom Navbar Styling */
+.navbar {
+  border-top: 1px solid #ddd;
+  background-color: #007bff;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.navbar .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  text-align: center;
+  color: #000000; /* Changed text color to black */
+  flex-grow: 1;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .nav-link .icon {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease;
+}
+
+.navbar .nav-link span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.navbar .nav-link:hover {
+  background-color: #0056b3;
+  color: #ffffff; /* Text color changes to white on hover */
+  transform: translateY(-3px);
+}
+
+.navbar .nav-link:hover .icon {
+  transform: scale(1.3);
+}
+
+/* Responsive Design for Navbar */
+@media (max-width: 768px) {
+  .navbar .nav-link {
+    padding: 10px;
+  }
+
+  .navbar .nav-link .icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .navbar .nav-link span {
+    font-size: 12px;
+  }
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.btn {
+  flex: 1;
+  margin: 0 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.menu-item {
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+  transform: translateY(-10px);
+}
